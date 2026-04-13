@@ -7,6 +7,12 @@
     - [Preferences](/getting-started/preferences)
     - [License](/getting-started/license)
 
+- — Predictions —
+
+    - [Introduction](/predictions/introduction)
+    - [Examples](/predictions/examples)
+    - [Token Reference](/predictions/token-reference)
+
 - — Object Operators —
 
     - [Select Hierarchy](/operators/object/select-hierarchy)
