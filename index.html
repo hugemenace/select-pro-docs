@@ -41,9 +41,30 @@
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
   <style>
+    body {
+      background-color: #131313;
+    }
+
     em {
       color: inherit !important;
       font-weight: 600;
+    }
+
+    .sidebar {
+      background-color: #1a1a1a;
+      color: #c8c8c8;
+    }
+
+    .sidebar-toggle {
+      width: auto;
+    }
+
+    .input-wrap > input {
+      background-color: #1a1a1a;
+    }
+
+    .search {
+      border-bottom: 1px solid #292929;
     }
 
     .cover-main > blockquote {
@@ -57,12 +78,16 @@
       margin: 0 auto;
     }
 
+    .markdown-section tr:nth-child(1n) {
+      background-color: #181818;
+    }
+
     .markdown-section tr:nth-child(2n) {
-      background-color: #363636;
+      background-color: #1d1d1d;
     }
 
     .markdown-section td {
-      border: 1px solid #000;
+      border: 1px solid #373737;
       padding: 6px 13px;
     }
 
@@ -71,10 +96,14 @@
     }
 
     .markdown-section th {
-      border: 1px solid #000;
+      border: 1px solid #373737;
       font-weight: bold;
       padding: 6px 13px;
-      background-color: #2e2e2e;
+      background-color: #262626;
+    }
+
+    .markdown-section hr {
+      border-bottom: 1px solid #383838;
     }
 
     section.cover .cover-main > p:last-child a:last-child {
@@ -115,6 +144,7 @@
     }
 
     .markdown-section p.tip {
+      background-color: #1d1d1d;
       border-color: #FF8737;
       border-radius: 2px;
       color: white;
@@ -129,7 +159,7 @@
     }
 
     .markdown-section p.warn {
-      background-color: #282828;
+      background-color: #1d1d1d;
       border-left: 4px solid rgb(97 182 223);
       border-radius: 2px;
       padding: 1rem;
@@ -141,15 +171,6 @@
 
     .markdown-section p.tip code {
       background-color: #3a3a3a !important;
-    }
-
-    .sidebar {
-      background-color: #333333;
-      color: #c8c8c8;
-    }
-
-    .sidebar-toggle {
-      width: auto;
     }
 
     .markdown-section iframe {
