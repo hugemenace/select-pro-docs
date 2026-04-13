@@ -53,5 +53,3 @@ The **Options...** entry at the bottom of the Select Pro menu opens a Quick Acti
 
 - **Reset Double-Click Defaults** — restores all double-click operator properties to their default values
 - **Reset Prediction Cache** — clears the cached predictions, forcing a fresh analysis on next menu open
-
-?> If you discover any issues or have questions, reach out via [email](mailto:support@hugemenace.co) or [Discord](https://www.hugemenace.co/discord).
