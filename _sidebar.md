@@ -5,6 +5,7 @@
     - [Changelog](/getting-started/changelog)
     - [Shortcuts](/getting-started/shortcuts)
     - [Preferences](/getting-started/preferences)
+    - [Support](/getting-started/support)
 
 - — Predictions —
 
