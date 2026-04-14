@@ -18,7 +18,7 @@
 
 ### Option 1 (Recommended)
 
-This option is the recommended and easiest way to update (Blender will retain your add-on preferences.)
+This option is the recommended and easiest way to update (**Blender will retain your add-on preferences.**)
 
 1. Download the latest version of the add-on (`select-pro.vX.Y.Z-platform.zip`)
 1. Open up Blender and go to **_`Edit > Preferences > Add-ons`_**
@@ -30,7 +30,7 @@ This option is the recommended and easiest way to update (Blender will retain yo
 
 ### Option 2 (Fresh Install)
 
-If you want to start with a fresh install, follow this method (addon preferences will be lost).
+If you want to start with a fresh install, follow this method (**addon preferences will be lost**).
 
 1. Download the latest version of the add-on (`select-pro.vX.Y.Z-platform.zip`)
 1. Open up Blender and go to **_`Edit > Preferences > Add-ons`_**
