@@ -8,7 +8,9 @@
 
 1. Download the latest version of the add-on (`select-pro.vX.Y.Z-platform.zip`)
 1. Open up Blender and go to **_`Edit > Preferences > Add-ons`_**
-1. Click the **Install** button in the top right, next to refresh.
+1. Depending on your Blender version:
+    - **Blender 4.0 - 4.1**: Click the `Install` button in the top right, next to refresh.
+    - **Blender 4.2 onwards**: Click on `Install from disk...` from the drop-down arrow in the top right.
 1. Select the zip file you downloaded and click install.
 1. Find the installed add-on and enable it by clicking the checkbox next to its name.
 
@@ -20,7 +22,9 @@ This option is the recommended and easiest way to update (Blender will retain yo
 
 1. Download the latest version of the add-on (`select-pro.vX.Y.Z-platform.zip`)
 1. Open up Blender and go to **_`Edit > Preferences > Add-ons`_**
-1. Click the **Install** button in the top right, next to refresh.
+1. Depending on your Blender version:
+    - **Blender 4.0 - 4.1**: Click the `Install` button in the top right, next to refresh.
+    - **Blender 4.2 onwards**: Click on `Install from disk...` from the drop-down arrow in the top right.
 1. Select the zip file you downloaded and click install.
 1. **Restart Blender.**
 
