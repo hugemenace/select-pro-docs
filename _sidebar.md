@@ -7,12 +7,6 @@
     - [Preferences](/getting-started/preferences)
     - [Support](/getting-started/support)
 
-- — Predictions —
-
-    - [Introduction](/predictions/introduction)
-    - [Examples](/predictions/examples)
-    - [Token Reference](/predictions/token-reference)
-
 - — Object Operators —
 
     - [Select Hierarchy](/operators/object/select-hierarchy)
@@ -29,3 +23,9 @@
     - [Select Similar Face Direction](/operators/mesh/select-similar-face-direction)
     - [Select Similar Face Islands](/operators/mesh/select-similar-face-islands)
     - [Select Vertices By Proximity](/operators/mesh/select-vertices-by-proximity)
+
+- — Custom Predictions —
+
+    - [Introduction](/custom-predictions/introduction)
+    - [Examples](/custom-predictions/examples)
+    - [Token Reference](/custom-predictions/token-reference)
