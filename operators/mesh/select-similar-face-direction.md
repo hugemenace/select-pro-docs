@@ -7,9 +7,9 @@ Select faces whose normals point in a similar direction to the active face. An a
 | Property | Shortcut | Default | Description |
 | :--- | :--- | :--- | :--- |
 | Angle Tolerance | N/A | `5°` | Maximum angle deviation from the reference normal for a face to be selected |
-| Mirror X | ALT | `False` | Also select faces with normals flipped across the object X axis |
-| Mirror Y | ALT | `False` | Also select faces with normals flipped across the object Y axis |
-| Mirror Z | ALT | `False` | Also select faces with normals flipped across the object Z axis |
+| Mirror X | N/A | `False` | Also select faces with normals flipped across the object X axis |
+| Mirror Y | N/A | `False` | Also select faces with normals flipped across the object Y axis |
+| Mirror Z | N/A | `False` | Also select faces with normals flipped across the object Z axis |
 
 ## Execution Modes
 

@@ -8,10 +8,11 @@ Flood-fill select a face surface starting from the active face. By default, the 
 | :--- | :--- | :--- | :--- |
 | Boundary Type | N/A | `Any` | The edge mark type to stop at when flood-filling. Has no effect when **Use Prediction** is enabled (see below) |
 | Use Prediction | N/A | `False` | Ignore edge marks and use face attribute similarity to determine the extent of the surface |
-| Normal Angle Threshold | N/A | `15°` | Maximum angle difference between face normals. Only applies in **Prediction** mode |
+| Normal Angle Threshold | N/A | `20°` | Maximum angle difference between face normals. Only applies in **Prediction** mode |
 | Area Range | N/A | `10×` | Maximum area multiplier between faces (`1.0` = identical, `2.0` = up to 2× bigger or smaller). Only applies in **Prediction** mode |
 | Perimeter Range | N/A | `10×` | Maximum perimeter multiplier between faces. Only applies in **Prediction** mode |
-| Corner Angle Threshold | N/A | `45°` | Maximum difference in average internal corner angles between faces. Only applies in **Prediction** mode |
+| Corner Angle Threshold | N/A | `65°` | Maximum difference in average internal corner angles between faces. Only applies in **Prediction** mode |
+| Fill Gaps | N/A | `True` | After the predictive flood fill, select any unselected faces surrounded on 2+ sides by selected faces that are within the normal angle threshold. Only applies in **Prediction** mode |
 
 ### Boundary Type Options
 

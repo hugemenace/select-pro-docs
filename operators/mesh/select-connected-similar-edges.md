@@ -8,7 +8,7 @@ Flood-fill selects all edges connected to the active edge that share the same ma
 | :--- | :--- | :--- | :--- |
 | Auto Detect Property | N/A | `True` | Automatically detect which property to match from the active edge. Detection order: Seam → Sharp → Crease → Bevel |
 | Property | N/A | `Crease` | Edge property to match when **Auto Detect Property** is disabled (see below) |
-| Only Loops | ALT | `False` | Ignore edges that are not part of a closed loop |
+| Only Loops | N/A | `False` | Ignore edges that are not part of a closed loop |
 | Tolerance | N/A | `0.0001` | Maximum difference allowed when comparing float properties (Crease and Bevel). Has no effect on Seam or Sharp |
 
 ### Property Options

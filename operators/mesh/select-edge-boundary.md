@@ -6,8 +6,8 @@ Flood-fill select connected boundary edges of the same type — naked (open bord
 
 | Property | Shortcut | Default | Description |
 | :--- | :--- | :--- | :--- |
-| Angle Tolerance | ALT | `60°` | Maximum angle deviation allowed along the boundary. Higher values allow less uniform edges to be included |
-| Only Loops | ALT | `False` | Ignore edges that are not part of a closed loop |
+| Angle Tolerance | N/A | `60°` | Maximum angle deviation allowed along the boundary. Higher values allow less uniform edges to be included |
+| Only Loops | N/A | `False` | Ignore edges that are not part of a closed loop |
 
 ## Execution Modes
 
