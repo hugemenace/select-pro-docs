@@ -2,6 +2,8 @@
 
 Flood-fill select connected boundary edges of the same type — naked (open border), convex, or concave — starting from the active edge. The boundary type is detected automatically from the active edge. An angle tolerance allows variation along the boundary to accommodate slightly uneven geometry.
 
+![Contiguous Edge Path](../../_media/boundary-edges.avif ':class=avif')
+
 ## Properties
 
 | Property | Shortcut | Default | Description |

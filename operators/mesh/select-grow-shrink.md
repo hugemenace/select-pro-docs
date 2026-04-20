@@ -2,6 +2,8 @@
 
 Interactively grow or shrink the current vertex, edge, or face selection. Move the mouse away from the starting point to grow, and toward it to shrink. Works in all mesh edit sub-modes.
 
+![Contiguous Edge Path](../../_media/grow-shrink.avif ':class=avif')
+
 ## Properties
 
 | Property | Shortcut | Default | Description |

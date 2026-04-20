@@ -2,6 +2,8 @@
 
 Select faces whose normals point in a similar direction to the active face. An angle tolerance defines a cone around the reference normal — any face whose normal falls within that cone is selected. Mirroring options allow the selection to include faces pointing in the opposite direction along one or more axes.
 
+![Contiguous Edge Path](../../_media/similar-face-direction.avif ':class=avif')
+
 ## Properties
 
 | Property | Shortcut | Default | Description |
