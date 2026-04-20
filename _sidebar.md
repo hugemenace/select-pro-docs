@@ -1,6 +1,6 @@
 - — Home —
     
-    - [Welcome](/)
+    - [Introduction](/getting-started/introduction)
     - [Install / Update](/getting-started/install-update)
     - [Changelog](/getting-started/changelog)
     - [Shortcuts](/getting-started/shortcuts)

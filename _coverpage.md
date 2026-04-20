@@ -4,7 +4,7 @@
 
 [Gumroad](https://hugemenace.gumroad.com/l/select-pro)
 [Superhive](https://superhivemarket.com/products/select-pro)
-[Getting Started](#welcome)
+[Getting Started](getting-started/introduction)
 
 
 ![color](#0E0E0E)
