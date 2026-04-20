@@ -22,12 +22,12 @@ Select Pro adds a set of advanced selection operators not available in Blender b
 - [Select Similar Size](/operators/object/select-similar-size) — select objects with similar dimensions or volume
 
 **Edit Mesh Mode**
-- [Select Connected Similar Edges](/operators/mesh/select-connected-similar-edges) — flood-fill select edges sharing the same mark type
+- [Select Similar Connected Edges](/operators/mesh/select-similar-connected-edges) — flood-fill select edges sharing the same mark type
 - [Select Contiguous Edge Path](/operators/mesh/select-contiguous-edge-path) — select an edge path by visual continuity
 - [Select Edge Boundary](/operators/mesh/select-edge-boundary) — select connected boundary edges of the same type
 - [Select Face Surface](/operators/mesh/select-face-surface) — flood-fill select a face surface bounded by edge marks or face attributes
-- [Select Grow / Shrink](/operators/mesh/select-grow-shrink) — interactively grow or shrink the current selection
-- [Select Similar Face Direction](/operators/mesh/select-similar-face-direction) — select faces pointing in a similar direction
+- [Grow/Shrink Selection](/operators/mesh/grow-shrink-selection) — interactively grow or shrink the current selection
+- [Select Similar Faces by Direction](/operators/mesh/select-similar-faces-by-direction) — select faces pointing in a similar direction
 - [Select Similar Face Islands](/operators/mesh/select-similar-face-islands) — select mesh islands with similar structure and volume
 - [Select Vertices by Proximity](/operators/mesh/select-vertices-by-proximity) — interactively select vertices within a radius
 

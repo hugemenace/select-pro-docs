@@ -81,7 +81,7 @@
 ### Features
 
 - Add multi-path selection support to the Contiguous Edge Path operator
-- Add multi-path selection support to the Select Connected Similar Edges operator
+- Add multi-path selection support to the Select Similar Connected Edges operator
 - Add multi-path selection support to the Select Edge Boundary operator
 - Add multi-surface selection support to the Select Face Surface operator
 - Add object mode Select Similar Size (by volume or dimensions) operator and associated predictions

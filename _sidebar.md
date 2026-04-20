@@ -15,12 +15,12 @@
 
 - — Mesh Operators —
 
-    - [Select Connected Similar Edges](/operators/mesh/select-connected-similar-edges)
+    - [Select Similar Connected Edges](/operators/mesh/select-similar-connected-edges)
     - [Select Contiguous Edge Path](/operators/mesh/select-contiguous-edge-path)
     - [Select Edge Boundary](/operators/mesh/select-edge-boundary)
     - [Select Face Surface](/operators/mesh/select-face-surface)
-    - [Select Grow Shrink](/operators/mesh/select-grow-shrink)
-    - [Select Similar Face Direction](/operators/mesh/select-similar-face-direction)
+    - [Grow/Shrink Selection](/operators/mesh/grow-shrink-selection)
+    - [Select Similar Faces by Direction](/operators/mesh/select-similar-faces-by-direction)
     - [Select Similar Face Islands](/operators/mesh/select-similar-face-islands)
     - [Select Vertices By Proximity](/operators/mesh/select-vertices-by-proximity)
 

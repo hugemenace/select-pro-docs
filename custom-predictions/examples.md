@@ -15,7 +15,7 @@ Increase the score of the **Similar Volume** prediction in Object Mode so it app
   "__VERSION__": 1,
   "__NAME__": "Boost Similar Volume",
   "OBJECT": {
-    "SELECTPRO_SIMILAR_SIZE": {
+    "SP_SIMILAR_SIZE": {
       "VOLUME": {
         "score": 500
       }
@@ -37,7 +37,7 @@ Rename the **Similar Volume** prediction to something shorter.
   "__VERSION__": 1,
   "__NAME__": "Rename Predictions",
   "OBJECT": {
-    "SELECTPRO_SIMILAR_SIZE": {
+    "SP_SIMILAR_SIZE": {
       "VOLUME": {
         "text": "Similar Volume",
         "prediction_text": "Same Volume"
@@ -120,12 +120,12 @@ Multiple modifications can live in a single file.
   "__VERSION__": 1,
   "__NAME__": "My Workflow Tweaks",
   "OBJECT": {
-    "SELECTPRO_SIMILAR_SIZE": {
+    "SP_SIMILAR_SIZE": {
       "VOLUME": {
         "score": 500
       }
     },
-    "SELECTPRO_SIMILAR_NAME": {
+    "SP_SIMILAR_NAME": {
       "DEFAULT": {
         "score": 300,
         "prediction_text": "Name Match"

@@ -1,4 +1,4 @@
-# Select Connected Similar Edges
+# Select Similar Connected Edges
 
 Flood-fill selects all edges connected to the active edge that share the same mark type — crease, bevel weight, seam, or sharp. The property to match can be detected automatically from the active edge, or set manually. Optionally restrict the result to edges that form closed loops.
 
