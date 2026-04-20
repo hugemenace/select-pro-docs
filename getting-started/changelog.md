@@ -1,12 +1,6 @@
 # Changelog
 
-## 0.5.1 — 2026-04-07
-
-### Features
-
-- Add selection ALL/SUBSET tokens and improve associated predictions
-
-## 0.5.0 — 2026-04-06
+## 0.5.2 — 2026-04-07
 
 ### Features
 
@@ -16,6 +10,7 @@
 - Add an options menu to quickly reset double-click operator defaults or reset the predictions cache
 - Add interactive grow/shrink selection operator and associated prediction
 - Add option to switch modal speed control key from SHIFT to CTRL and also to complete on mouse release instead of press
+- Add selection ALL/SUBSET tokens and improve associated predictions
 - Add select grow/shrink to the double-click operator options
 
 ### Bug Fixes
@@ -34,7 +29,7 @@
 - Ensure the BMesh selection cache is flushed on cancelling the select vertices by proximity modal operator
 - Ensure the predict menu doesn't open in mixed-mode contexts (e.g., bone selection active while in weight paint mode)
 
-## 0.4.0 — 2026-03-21
+## 0.4.4 — 2026-03-21
 
 ### Features
 
