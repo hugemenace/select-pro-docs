@@ -2,6 +2,8 @@
 
 Select a contiguous edge path from the active edge by following the most visually straight route through the mesh. The path is determined by direction continuity, face angles, and edge length — automatically navigating bends and corners while stopping where the geometry becomes ambiguous.
 
+![Contiguous Edge Path](../../_media/contiguous-path.avif ':class=avif')
+
 ## Properties
 
 | Property | Shortcut | Default | Description |

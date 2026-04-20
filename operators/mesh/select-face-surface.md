@@ -2,6 +2,8 @@
 
 Flood-fill select a face surface starting from the active face. By default, the surface is bounded by marked edges (seams, sharps, creases, or bevel weights). Alternatively, enable **Use Prediction** to ignore edge marks and instead determine surface boundaries from face attribute similarity — normal direction, area, perimeter, and corner angles.
 
+![Contiguous Edge Path](../../_media/face-surface.avif ':class=avif')
+
 ## Properties
 
 | Property | Shortcut | Default | Description |

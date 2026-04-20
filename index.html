@@ -78,6 +78,19 @@
       margin: 0 auto;
     }
 
+    .markdown-section table {
+      border-radius: 5px;
+      overflow: hidden;
+      border-collapse: collapse;
+      outline: 1px solid #363636;
+      display: inline-block;
+      width: auto;
+    }
+
+    .markdown-section tr {
+      border-top: none;
+    }
+
     .markdown-section tr:nth-child(1n) {
       background-color: #181818;
     }
@@ -100,6 +113,25 @@
       font-weight: bold;
       padding: 6px 13px;
       background-color: #262626;
+    }
+
+    .markdown-section th:first-child,
+    .markdown-section td:first-child {
+      border-left: none;
+    }
+
+    .markdown-section th:last-child,
+    .markdown-section td:last-child {
+      border-right: none;
+    }
+
+    .markdown-section tr:first-child th,
+    .markdown-section tr:first-child td {
+      border-top: none;
+    }
+
+    .markdown-section tr:last-child td {
+      border-bottom: none;
     }
 
     .markdown-section hr {
@@ -175,6 +207,11 @@
 
     .markdown-section iframe {
       border: 1px solid #000;
+    }
+
+    .avif {
+      border-radius: 5px;
+      border: 1px solid #363636;
     }
   </style>
 </body>

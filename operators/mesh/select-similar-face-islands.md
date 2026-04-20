@@ -2,6 +2,8 @@
 
 Select mesh islands with similar properties to the island containing the active face. Similarity is measured using bounding box volume and structural complexity (a combined measure of vertex, edge, and face counts). Filters are applied in order of specificity so the most distinctive metric narrows the candidates first.
 
+![Contiguous Edge Path](../../_media/similar-islands.avif ':class=avif')
+
 ## Properties
 
 | Property | Shortcut | Default | Description |
