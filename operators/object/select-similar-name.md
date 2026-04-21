@@ -2,6 +2,8 @@
 
 Select objects with names similar to the active object (or all selected objects). Names are compared after optionally stripping common affixes (e.g. `.001`, `_high`/`_low`, `L.`/`R.`), and similarity is measured using Levenshtein distance — allowing fuzzy matching beyond exact name equality.
 
+![Contiguous Edge Path](../../_media/similar-name.avif ':class=avif')
+
 ## Properties
 
 | Property | Shortcut | Default | Description |

@@ -2,6 +2,8 @@
 
 Select objects with sizes similar to the active object (or all selected objects). Size can be compared by overall volume or by individual axis dimensions, with a configurable tolerance to control how closely sizes must match.
 
+![Contiguous Edge Path](../../_media/similar-size.avif ':class=avif')
+
 ## Properties
 
 | Property | Shortcut | Default | Description |

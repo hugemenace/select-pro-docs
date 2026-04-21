@@ -2,6 +2,8 @@
 
 Select objects related to the active object (or all selected objects) by traversing the scene's parent-child hierarchy. Use the **Direction** property to control which part of the hierarchy is targeted — from immediate children or parents, to the entire connected family tree.
 
+![Contiguous Edge Path](../../_media/hierarchy.avif ':class=avif')
+
 ## Properties
 
 | Property | Shortcut | Default | Description |
