@@ -8,6 +8,7 @@ Interactively select vertices within a radius of the active vertex. Move the mou
 
 | Property | Shortcut | Default | Description |
 | :--- | :--- | :--- | :--- |
+| Radius | N/A | `0.0` | Selection radius in world units |
 | Only Connected | `C` | `False` | Select only vertices within the radius that are reachable via connected edges from the origin vertex |
 
 ## Execution Modes
