@@ -6,6 +6,21 @@ See [Introduction](/predictions/introduction) for how `match_tokens` conditions 
 
 ---
 
+## GLOBAL
+
+Tokens available in all modes and contexts.
+
+| Token | Description |
+| :--- | :--- |
+| `GLOBAL::ALWAYS` | Always true; use to show a prediction in all contexts |
+| `GLOBAL::IS_EDIT_ARMATURE_MODE` | The current mode is Edit Armature Mode |
+| `GLOBAL::IS_EDIT_CURVE_MODE` | The current mode is Edit Curve Mode |
+| `GLOBAL::IS_EDIT_MESH_MODE` | The current mode is Edit Mesh Mode |
+| `GLOBAL::IS_OBJECT_MODE` | The current mode is Object Mode |
+| `GLOBAL::IS_POSE_MODE` | The current mode is Pose Mode |
+
+---
+
 ## SELECTION
 
 Tokens describing the state of the current selection.
@@ -14,7 +29,10 @@ Tokens describing the state of the current selection.
 | :--- | :--- |
 | `SELECTION::ALL` | All elements are selected |
 | `SELECTION::ANY` | At least one element is selected |
+| `SELECTION::HAS_VERTEX_OVERLAPS` | At least two selected vertices are within 0.1 mm of each other |
 | `SELECTION::ISOLATED_TARGET` | The active element is isolated (nothing else selected) |
+| `SELECTION::ISOLATED_VERTEX_GROUP` | Three or more vertices are selected and none are directly connected by an edge |
+| `SELECTION::ISOLATED_VERTEX_PAIR` | Exactly two vertices are selected and they are not directly connected by an edge |
 | `SELECTION::MULTIPLE` | More than one element is selected |
 | `SELECTION::NONE` | Nothing is selected |
 | `SELECTION::SINGLE` | Exactly one element is selected |
@@ -52,7 +70,10 @@ Tokens describing object-level properties (Object Mode).
 | `OBJECTS::TARGET_HAS_LOW_LOD_AFFIX` | The active object's name contains a `_low` affix |
 | `OBJECTS::TARGET_HAS_MATERIALS` | The active object has materials assigned |
 | `OBJECTS::TARGET_HAS_MIRROR_AFFIX` | The active object's name contains an `L.` / `R.` mirror affix |
+| `OBJECTS::TARGET_HAS_ROTATION` | The active object has a non-identity rotation |
+| `OBJECTS::TARGET_HAS_SCALE` | The active object has a non-unit scale |
 | `OBJECTS::TARGET_HAS_SHARED_DATA` | Other objects share the same object data as the active object |
+| `OBJECTS::TARGET_HAS_TRANSLATION` | The active object has a non-zero world-space location |
 | `OBJECTS::TARGET_HAS_VOLUME` | The active object has a non-zero volume |
 | `OBJECTS::TARGET_IS_TYPE_ARMATURE` | The active object is an Armature |
 | `OBJECTS::TARGET_IS_TYPE_CAMERA` | The active object is a Camera |
@@ -130,6 +151,7 @@ Tokens describing the state of the active mesh (Edit Mesh Mode).
 | `MESH::IS_EDGE_MODE` | The mesh is in edge select mode |
 | `MESH::IS_FACE_MODE` | The mesh is in face select mode |
 | `MESH::IS_VERTEX_MODE` | The mesh is in vertex select mode |
+| `MESH::SELECTION_HAS_DISSOLVABLE` | At least one selected vertex or edge can be dissolved |
 
 ---
 
@@ -140,10 +162,14 @@ Tokens describing the active vertex or vertex selection (Edit Mesh Mode).
 | Token | Description |
 | :--- | :--- |
 | `VERTICES::SELECTION_HAS_CONNECTED_VERTICES` | The selected vertices are connected to each other |
+| `VERTICES::SELECTION_HAS_DISSOLVABLE` | At least one selected vertex is dissolvable (all adjacent edges are manifold with a small dihedral angle) |
 | `VERTICES::TARGET_HAS_MIRROR_X` | The active vertex has a mirror counterpart on the X axis |
 | `VERTICES::TARGET_HAS_MIRROR_Y` | The active vertex has a mirror counterpart on the Y axis |
 | `VERTICES::TARGET_HAS_MIRROR_Z` | The active vertex has a mirror counterpart on the Z axis |
+| `VERTICES::TARGET_HAS_WIRE_EDGES` | The active vertex has one or more wire edges (edges with no linked faces) |
 | `VERTICES::TARGET_IN_VGROUP` | The active vertex belongs to a vertex group |
+| `VERTICES::TARGET_IS_NAKED_VERTEX` | The active vertex is standalone or has only wire edges |
+| `VERTICES::TARGET_IS_STANDALONE_VERTEX` | The active vertex has no connected edges |
 
 ---
 
@@ -153,8 +179,11 @@ Tokens describing the active edge or edge selection (Edit Mesh Mode).
 
 | Token | Description |
 | :--- | :--- |
+| `EDGES::SELECTION_HAS_BRIDGE_ENDS` | Exactly two independent same-type components of equal edge count are selected — the precondition for Bridge Edge Loops |
 | `EDGES::SELECTION_HAS_CONNECTED_EDGES` | The selected edges form a connected chain |
+| `EDGES::SELECTION_HAS_DISSOLVABLE` | At least one selected edge is dissolvable (manifold with both adjacent faces co-planar) |
 | `EDGES::SELECTION_HAS_EDGE_CHAINS` | The selection contains edge chains |
+| `EDGES::SELECTION_HAS_EDGE_LOOP_BOUNDARIES` | At least one connected component of selected edges forms the perimeter of a filled face patch |
 | `EDGES::SELECTION_HAS_EDGE_LOOPS` | The selection contains edge loops |
 | `EDGES::SELECTION_HAS_UNIFORM_LENGTHS` | The selected edges have uniform lengths |
 | `EDGES::SELECTION_HAS_VARIED_LENGTHS` | The selected edges have varied lengths |
@@ -189,6 +218,10 @@ Tokens describing the active face or face selection (Edit Mesh Mode).
 | :--- | :--- |
 | `FACES::SELECTION_HAS_CONNECTED_FACES` | The selected faces are connected to each other |
 | `FACES::SELECTION_HAS_FACE_ISLANDS` | The selection contains disconnected face islands |
+| `FACES::SELECTION_HAS_NGONS` | At least one selected face is an ngon |
+| `FACES::SELECTION_HAS_QUADS` | At least one selected face is a quad |
+| `FACES::SELECTION_HAS_TRIANGLES` | At least one selected face is a triangle |
+| `FACES::SELECTION_IS_PATCHES` | Every connected component of the face selection contains at least 2 faces |
 | `FACES::TARGET_HAS_MIRROR_X` | The active face has a mirror counterpart on the X axis |
 | `FACES::TARGET_HAS_MIRROR_Y` | The active face has a mirror counterpart on the Y axis |
 | `FACES::TARGET_HAS_MIRROR_Z` | The active face has a mirror counterpart on the Z axis |
