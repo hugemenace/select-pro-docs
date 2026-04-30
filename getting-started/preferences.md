@@ -8,6 +8,7 @@
 | :--- | :--- |
 | **Enable global pinned items** | Show All, None, and Invert selection operators at the top of the menu |
 | **Keep all mode specific selection tools in a submenu** | Collapse mode-specific Blender selection tools into a submenu instead of showing them inline |
+| **Enable menu prediction grouping** | Group together all menus that appear in the list of predictions |
 | **Show options menu** | Show the Options entry at the bottom of the menu |
 | **Enable right-click context menu integration** | Add Select Pro to Blender's right-click context menu in Object and Edit Mesh modes. Requires a reload to take effect |
 | **Enable the sidebar / N-panel** | Show the Select Pro panel in the sidebar (N-panel). Requires a reload to take effect |
