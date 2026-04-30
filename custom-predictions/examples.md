@@ -171,3 +171,38 @@ The example below adds the **Select Similar** menu so it appears as a prediction
 `MENUS` and `SELECT_SIMILAR` are arbitrary IDs — use names that are meaningful to you. They just need to be unique within the mode.
 
 When **Enable menu prediction grouping** is on (the default), any menus present in the predictions list are automatically grouped together at the bottom of the list. When disabled, menus appear inline with all other predictions, ordered by score.
+
+---
+
+## Show a Fallback When Predictions Are Skipped
+
+When a scene is too large for predictions to run, `GLOBAL::PREDICTIONS_SKIPPED` is emitted in place of `GLOBAL::PREDICTIONS_EXECUTED`. Pair it with a sub-mode token to surface context-aware fallbacks for specific select modes.
+
+The example below shows **Surface (Predictive)** when predictions are skipped and the mesh is in face select mode.
+
+```json
+{
+  "__VERSION__": 1,
+  "__NAME__": "Face Mode Fallback",
+  "EDIT_MESH": {
+    "SP_FACE_SURFACE": {
+      "SKIPPED_FALLBACK": {
+        "operator": "sp_face.select_surface",
+        "text": "Surface (Predictive)",
+        "icon": "GP_SELECT_STROKES",
+        "score": 160,
+        "params": {
+          "use_prediction": [true, "bool"]
+        },
+        "match_tokens": [
+          ["GLOBAL::PREDICTIONS_SKIPPED", "GLOBAL::IS_EDIT_MESH_FACE_MODE"]
+        ],
+        "invoke": false,
+        "prediction_invoke": true
+      }
+    }
+  }
+}
+```
+
+The compound condition requires both tokens to be present. Add entries under `SP_FACE_SURFACE` — or a new op set — to cover vertex and edge modes the same way.

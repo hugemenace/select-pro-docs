@@ -15,9 +15,16 @@ Tokens available in all modes and contexts.
 | `GLOBAL::ALWAYS` | Always true; use to show a prediction in all contexts |
 | `GLOBAL::IS_EDIT_ARMATURE_MODE` | The current mode is Edit Armature Mode |
 | `GLOBAL::IS_EDIT_CURVE_MODE` | The current mode is Edit Curve Mode |
+| `GLOBAL::IS_EDIT_MESH_EDGE_MODE` | The mesh select mode is set to Edge (exclusively) |
+| `GLOBAL::IS_EDIT_MESH_FACE_MODE` | The mesh select mode is set to Face (exclusively) |
 | `GLOBAL::IS_EDIT_MESH_MODE` | The current mode is Edit Mesh Mode |
+| `GLOBAL::IS_EDIT_MESH_VERTEX_MODE` | The mesh select mode includes Vertex |
 | `GLOBAL::IS_OBJECT_MODE` | The current mode is Object Mode |
 | `GLOBAL::IS_POSE_MODE` | The current mode is Pose Mode |
+| `GLOBAL::PREDICTIONS_AVAILABLE` | The prediction engine is available (native library loaded) |
+| `GLOBAL::PREDICTIONS_EXECUTED` | Predictions ran successfully this draw |
+| `GLOBAL::PREDICTIONS_SKIPPED` | Predictions were skipped due to scene complexity |
+| `GLOBAL::PREDICTIONS_UNAVAILABLE` | The prediction engine is unavailable (native library missing) |
 
 ---
 
