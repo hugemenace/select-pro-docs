@@ -1,6 +1,6 @@
 # Select Edge Boundary
 
-Flood-fill select connected boundary edges of the same type — naked (open border), convex, or concave — starting from the active edge. The boundary type is detected automatically from the active edge. An angle tolerance allows variation along the boundary to accommodate slightly uneven geometry.
+Flood-fill select all connected boundary edges starting from the active edge. The edge type is detected automatically — wire edges (no faces) select all connected wire edges, naked edges (one face) select all connected naked edges, and surface edges (two faces) select all connected edges meeting the minimum face angle threshold.
 
 ![Contiguous Edge Path](../../_media/boundary-edges.avif ':class=avif')
 
@@ -8,14 +8,5 @@ Flood-fill select connected boundary edges of the same type — naked (open bord
 
 | Property | Shortcut | Default | Description |
 | :--- | :--- | :--- | :--- |
-| Angle Tolerance | N/A | `60°` | Maximum angle deviation allowed along the boundary. Higher values allow less uniform edges to be included |
-| Only Loops | N/A | `False` | Ignore edges that are not part of a closed loop |
-
-## Execution Modes
-
-Hold down these keys when executing the operator to change its default behaviour.
-
-| Key | Description |
-| :--- | :--- |
-| SHIFT | Use all selected edges as starting points instead of just the active edge |
-| ALT | Only select edges which are part of a closed loop |
+| Minimum Angle | N/A | `30°` | Minimum face angle required for an edge to be included. Only applies to surface edges |
+| Use Smart Surface | N/A | `False` | Limit selection to the boundary on the surface under the cursor, falling back to the surface most aligned with the viewport camera. Only applies to surface edges |
