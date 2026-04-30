@@ -111,12 +111,8 @@ Tokens describing parent-child relationships of the active object (Object Mode).
 | `HIERARCHY::TARGET_HAS_PARENT` | The active object has a direct parent |
 | `HIERARCHY::TARGET_HAS_ROOT` | The active object has a root ancestor |
 | `HIERARCHY::TARGET_HAS_SIBLINGS` | The active object has siblings (objects sharing the same parent) |
-| `HIERARCHY::SELECTION_HAS_ANCESTORS` | At least one selected object has ancestors |
 | `HIERARCHY::SELECTION_HAS_CHILDREN` | At least one selected object has children |
-| `HIERARCHY::SELECTION_HAS_DESCENDANTS` | At least one selected object has descendants |
-| `HIERARCHY::SELECTION_HAS_FAMILY` | At least one selected object is part of a hierarchy |
 | `HIERARCHY::SELECTION_HAS_PARENT` | At least one selected object has a parent |
-| `HIERARCHY::SELECTION_HAS_ROOT` | At least one selected object has a root ancestor |
 | `HIERARCHY::SELECTION_HAS_SIBLINGS` | At least one selected object has siblings |
 
 ---
@@ -144,9 +140,9 @@ Tokens describing the state of the active mesh (Edit Mesh Mode).
 | `MESH::HAS_SELECTED_EDGES` | At least one edge is selected |
 | `MESH::HAS_SELECTED_FACES` | At least one face is selected |
 | `MESH::HAS_SELECTED_VERTICES` | At least one vertex is selected |
-| `MESH::HAS_SINGLE_EDGE` | Exactly one edge is selected |
-| `MESH::HAS_SINGLE_FACE` | Exactly one face is selected |
-| `MESH::HAS_SINGLE_VERTEX` | Exactly one vertex is selected |
+| `MESH::HAS_SINGLE_EDGE` | The mesh has exactly one edge |
+| `MESH::HAS_SINGLE_FACE` | The mesh has exactly one face |
+| `MESH::HAS_SINGLE_VERTEX` | The mesh has exactly one vertex |
 | `MESH::HAS_TRIANGLES` | The mesh has triangles |
 | `MESH::IS_EDGE_MODE` | The mesh is in edge select mode |
 | `MESH::IS_FACE_MODE` | The mesh is in face select mode |
@@ -189,8 +185,8 @@ Tokens describing the active edge or edge selection (Edit Mesh Mode).
 | `EDGES::SELECTION_HAS_VARIED_LENGTHS` | The selected edges have varied lengths |
 | `EDGES::SELECTION_IS_EDGE_CHAIN` | The entire selection forms a single edge chain |
 | `EDGES::SELECTION_IS_EDGE_LOOP` | The entire selection forms a single edge loop |
-| `EDGES::SELECTION_ONLY_EDGE_CHAINS` | The selection contains only edge chains |
-| `EDGES::SELECTION_ONLY_EDGE_LOOPS` | The selection contains only edge loops |
+| `EDGES::SELECTION_IS_EDGE_CHAINS` | The selection contains only edge chains |
+| `EDGES::SELECTION_IS_EDGE_LOOPS` | The selection contains only edge loops |
 | `EDGES::TARGET_HAS_BEVEL` | The active edge has a bevel weight |
 | `EDGES::TARGET_HAS_CREASE` | The active edge has a crease |
 | `EDGES::TARGET_HAS_MIRROR_X` | The active edge has a mirror counterpart on the X axis |
@@ -221,7 +217,10 @@ Tokens describing the active face or face selection (Edit Mesh Mode).
 | `FACES::SELECTION_HAS_NGONS` | At least one selected face is an ngon |
 | `FACES::SELECTION_HAS_QUADS` | At least one selected face is a quad |
 | `FACES::SELECTION_HAS_TRIANGLES` | At least one selected face is a triangle |
+| `FACES::SELECTION_IS_NGONS` | Every selected face is an ngon |
 | `FACES::SELECTION_IS_PATCHES` | Every connected component of the face selection contains at least 2 faces |
+| `FACES::SELECTION_IS_QUADS` | Every selected face is a quad |
+| `FACES::SELECTION_IS_TRIANGLES` | Every selected face is a triangle |
 | `FACES::TARGET_HAS_MIRROR_X` | The active face has a mirror counterpart on the X axis |
 | `FACES::TARGET_HAS_MIRROR_Y` | The active face has a mirror counterpart on the Y axis |
 | `FACES::TARGET_HAS_MIRROR_Z` | The active face has a mirror counterpart on the Z axis |
