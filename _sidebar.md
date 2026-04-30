@@ -29,3 +29,4 @@
     - [Introduction](/custom-predictions/introduction)
     - [Examples](/custom-predictions/examples)
     - [Token Reference](/custom-predictions/token-reference)
+    - [Menu Reference](/custom-predictions/menu-reference)

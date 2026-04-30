@@ -134,3 +134,40 @@ Multiple modifications can live in a single file.
   }
 }
 ```
+
+---
+
+## Add a Menu to the Predictions
+
+Use `wm.call_menu` to surface any Blender menu as a prediction. The `name` param is the menu's bl_idname.
+
+The example below adds the **Select Similar** menu so it appears as a prediction whenever Edit Mesh Mode is active.
+
+```json
+{
+  "__VERSION__": 1,
+  "__NAME__": "Select Similar Menu",
+  "EDIT_MESH": {
+    "MENUS": {
+      "SELECT_SIMILAR": {
+        "operator": "wm.call_menu",
+        "text": "Select Similar",
+        "icon": "MENU_PANEL",
+        "score": 100,
+        "params": {
+          "name": ["SELECT_PRO_MT_blender_edit_mesh_vertex_select_similar", "str"]
+        },
+        "match_tokens": [
+          "GLOBAL::IS_EDIT_MESH_MODE"
+        ],
+        "invoke": false,
+        "prediction_invoke": false
+      }
+    }
+  }
+}
+```
+
+`MENUS` and `SELECT_SIMILAR` are arbitrary IDs — use names that are meaningful to you. They just need to be unique within the mode.
+
+When **Enable menu prediction grouping** is on (the default), any menus present in the predictions list are automatically grouped together at the bottom of the list. When disabled, menus appear inline with all other predictions, ordered by score.
