@@ -1,5 +1,33 @@
 # Changelog
 
+## 1.0.0 — 2026-04-30
+
+### Features
+
+- Add header and status bar text along with property keybinds for Grow/Shrink and Vertices by Proximity modal operators
+- Add improved grow/shrink and linked edges predictions for wire and boundary edges
+- Add new default Smart Edge Select double-click option (automatically pick the best operator based on the active edge's properties)
+- Add operator panel to the sidebar / N-panel containing all of Select Pro's custom operators
+- Add select similar face direction to face double-click options
+- Convert similar face direction to modal operator and add connected_only option (off by default)
+- Ensure the selection sensitivity of select vertices by proximity is consistent across different mesh scales
+- Improve contiguous path's edge scoring algorithm and add planarity weighting
+- Improve the boundary edge detection mechanism in contiguous path
+- Nativize and improve the contiguous edge path operator's performance, stability, and edge-scoring algorithm
+- Nativize and improve the face direction operator's performance
+- Nativize and improve the face island operator's performance
+- Nativize and improve the face surface operator's performance
+- Nativize and improve the grow/shrink operator's performance
+- Nativize and improve the vertices by proximity operator's performance
+- Rewrite the edge boundary operator improving selection across wire, naked, and manifold edges, including "smart surface" selection (boundary of surface under the mouse cursor)
+
+### Bug Fixes
+
+- Ensure that all mesh selection operators ignore hidden elements where appropriate
+- Ensure that double-click operator settings are only saved when the operator was invoked via double-click (ignore savable properties when invoked via the menu)
+- Ensure that hidden objects aren't included in the object mode analysis step
+- Fix the op_table edit mesh loop operators for Blender 5.2 (mesh.select_edge_loop_multi)
+
 ## 0.5.2 — 2026-04-07
 
 ### Features
