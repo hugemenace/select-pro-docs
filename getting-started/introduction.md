@@ -55,9 +55,9 @@ Select Pro can save named snapshots of the current selection and restore them at
 
 Access the feature via **Manage Selections** in the main menu. See [Save & Recall Selections](/getting-started/save-recall-selections) for full details.
 
-## Quick Actions Menu
+## Options Menu
 
-The **Options...** entry at the bottom of the Select Pro menu opens a Quick Actions menu with two utilities:
+The **Options...** entry at the bottom of the Select Pro menu opens a menu with two utilities:
 
 - **Reset Double-Click Defaults** — restores all double-click operator properties to their default values
 - **Reset Prediction Cache** — clears the cached predictions, forcing a fresh analysis on next menu open
