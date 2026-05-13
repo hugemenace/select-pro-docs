@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.1.0 — 2026-05-13
+
+### Features
+
+- Add quad-continuation detection to Smart Edge Select to run Blender's native loop select over contiguous paths
+- Add Select Collection operator (select all objects in the collection or focus the collection root)
+- Add Select Similar Element operator (vertex, edge, and face) with associated predictions and double-click options
+- Add vertex, edge, and face loop (Blender native) options to the double-click dispatch
+- Add Smart Select Toggle (on by default), replacing the separate All and None pinned items
+- Add save and recall selections across all supported modes via the main menu
+- Convert edge boundary operator into a modal operator for interactive surface or open-ended boundary selection
+
+### Bug Fixes
+
+- Ensure lengths displayed in modal operators account for the None unit system (plain Blender units)
+- Fix null-selection bug with the Select Vertices by Proximity operator
+
 ## 1.0.0 — 2026-04-30
 
 ### Features
