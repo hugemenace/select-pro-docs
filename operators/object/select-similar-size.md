@@ -14,6 +14,7 @@ Select objects with sizes similar to the active object (or all selected objects)
 | Compare Z | N/A | `True` | Include the Z axis when comparing dimensions. Only applies in **Dimensions** mode |
 | Tolerance | N/A | `25%` | Maximum percentage difference allowed for a size to be considered a match. `0%` requires an exact match |
 | Ignore Unapplied Scale | N/A | `False` | Divide dimensions by the object's scale before comparing, so unapplied scale is not factored in |
+| Only Active Object | N/A | `True` | Use only the active object as the seed; when disabled, all selected objects are used |
 
 ### Size Method Options
 
@@ -28,4 +29,4 @@ Hold down these keys when executing the operator to change its default behaviour
 
 | Key | Description |
 | :--- | :--- |
-| SHIFT | Use all selected objects instead of just the active object |
+| SHIFT | Sets **Only Active Object** to `False` |

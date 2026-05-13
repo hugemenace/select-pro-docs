@@ -2,7 +2,7 @@
 
 Select a contiguous edge path from the active edge by following the most visually straight route through the mesh. The path is determined by direction continuity, face angles, and edge length — automatically navigating bends and corners while stopping where the geometry becomes ambiguous.
 
-![Contiguous Edge Path](../../_media/contiguous-path.avif ':class=avif')
+![Select Contiguous Edge Path](../../_media/contiguous-path.avif ':class=avif')
 
 ## Properties
 
@@ -10,6 +10,7 @@ Select a contiguous edge path from the active edge by following the most visuall
 | :--- | :--- | :--- | :--- |
 | Boundary Angle | N/A | `180°` | Maximum face angle the path is allowed to traverse. Paths will stop at edges whose face angle exceeds this value |
 | Ignore Marks | N/A | `True` | Allow the path to cross edges that have marks (seams, sharps, etc.) without stopping |
+| Only Active Edge | N/A | `True` | Use only the active edge as the starting point; when disabled, all selected edges are used |
 
 ## Execution Modes
 
@@ -17,4 +18,4 @@ Hold down these keys when executing the operator to change its default behaviour
 
 | Key | Description |
 | :--- | :--- |
-| SHIFT | Use all selected edges as starting points instead of just the active edge |
+| SHIFT | Sets **Only Active Edge** to `False` |

@@ -1,12 +1,25 @@
 # Select Edge Boundary
 
-Flood-fill select all connected boundary edges starting from the active edge. The edge type is detected automatically — wire edges (no faces) select all connected wire edges, naked edges (one face) select all connected naked edges, and surface edges (two faces) select all connected edges meeting the minimum face angle threshold.
+Select connected boundary edges starting from the active edge. The edge type is detected automatically:
 
-![Contiguous Edge Path](../../_media/boundary-edges.avif ':class=avif')
+- **Wire edges** (no linked faces) — immediately selects all connected wire edges
+- **Naked edges** (one linked face) — immediately selects all connected naked edges
+- **Surface edges** (two linked faces) — enters an interactive preview mode where hovering the cursor to either side of the edge highlights that surface's boundary; press `A` to select all connected boundaries regardless of surface side
+
+![Select Edge Boundary](../../_media/boundary-edges.avif ':class=avif')
 
 ## Properties
 
 | Property | Shortcut | Default | Description |
 | :--- | :--- | :--- | :--- |
-| Minimum Angle | N/A | `30°` | Minimum face angle required for an edge to be included. Only applies to surface edges |
-| Use Smart Surface | N/A | `False` | Limit selection to the boundary on the surface under the cursor, falling back to the surface most aligned with the viewport camera. Only applies to surface edges |
+| All Boundaries | `A` | `False` | Select all connected boundary edges rather than just the surface boundary under the cursor. Only applies to surface edges |
+
+## Interactive Controls
+
+These keys can be pressed while the operator is running to change its behaviour. Only applies when the active edge is a surface edge.
+
+| Key | Description |
+| :--- | :--- |
+| `A` | Toggle **All Boundaries** |
+| `LMB` / `Enter` | Confirm and apply the selection |
+| `RMB` / `Esc` | Cancel and restore the original selection |

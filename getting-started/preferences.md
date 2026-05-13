@@ -7,9 +7,11 @@
 | Setting | Description |
 | :--- | :--- |
 | **Enable global pinned items** | Show All, None, and Invert selection operators at the top of the menu |
+| **Enable Smart Select Toggle** | Replace the pinned All and None operators with a single Smart Select Toggle operator. Requires a reload to take effect |
 | **Keep all mode specific selection tools in a submenu** | Collapse mode-specific Blender selection tools into a submenu instead of showing them inline |
 | **Enable menu prediction grouping** | Group together all menus that appear in the list of predictions |
 | **Show options menu** | Show the Options entry at the bottom of the menu |
+| **Enable saved selections** | Show the Manage Selections menu for saving and recalling selections |
 | **Enable right-click context menu integration** | Add Select Pro to Blender's right-click context menu in Object and Edit Mesh modes. Requires a reload to take effect |
 | **Enable the sidebar / N-panel** | Show the Select Pro panel in the sidebar (N-panel). Requires a reload to take effect |
 
@@ -18,7 +20,6 @@
 | Setting | Description |
 | :--- | :--- |
 | **Enable context-aware predictions** | Show predicted selection operators in the menu based on the current context |
-| **The maximum number of predictions to show** | Cap on how many predicted operators appear in the menu |
 | **Enable automatic prediction skipping** | Automatically reduce prediction thresholds when predictions take too long, to keep menu response times fast |
 | **Max prediction time (ms)** | If predictions exceed this duration, the threshold for the current mode is reduced automatically. Only applies when automatic skipping is enabled |
 | **Show predictions skipped notice** | Show an info label in the menu when predictions have been skipped |

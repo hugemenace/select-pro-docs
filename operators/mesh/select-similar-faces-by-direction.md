@@ -2,7 +2,7 @@
 
 Interactively select faces whose normals point in a similar direction to the active face. Move the mouse away from the starting point to increase the angle tolerance and toward it to decrease it. Mirroring options allow the selection to include faces pointing in the opposite direction along one or more axes.
 
-![Contiguous Edge Path](../../_media/similar-face-direction.avif ':class=avif')
+![Select Similar Faces by Direction](../../_media/similar-face-direction.avif ':class=avif')
 
 ## Properties
 
@@ -13,6 +13,7 @@ Interactively select faces whose normals point in a similar direction to the act
 | Mirror Y | `Y` | `False` | Also select faces with normals flipped across the object Y axis |
 | Mirror Z | `Z` | `False` | Also select faces with normals flipped across the object Z axis |
 | Connected Only | `C` | `False` | Only select faces connected to the active face(s) that match the criteria |
+| Only Active Face | N/A | `True` | Use only the active face as the reference; when disabled, all selected faces are used |
 
 ## Execution Modes
 
@@ -20,8 +21,8 @@ Hold down these keys when executing the operator to change its default behaviour
 
 | Key | Description |
 | :--- | :--- |
-| SHIFT | Use all selected faces as references instead of just the active face |
-| ALT | Enable mirrored selection across all object axes (X, Y, and Z) |
+| SHIFT | Sets **Only Active Face** to `False` |
+| ALT | Sets **Mirror X/Y/Z** to `True` |
 
 ## Interactive Controls
 

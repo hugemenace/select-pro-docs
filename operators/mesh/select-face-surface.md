@@ -2,7 +2,7 @@
 
 Flood-fill select a face surface starting from the active face. By default, the surface is bounded by marked edges (seams, sharps, creases, or bevel weights). Alternatively, enable **Use Prediction** to ignore edge marks and instead determine surface boundaries from face attribute similarity — normal direction, area, perimeter, and corner angles.
 
-![Contiguous Edge Path](../../_media/face-surface.avif ':class=avif')
+![Select Face Surface](../../_media/face-surface.avif ':class=avif')
 
 ## Properties
 
@@ -15,6 +15,7 @@ Flood-fill select a face surface starting from the active face. By default, the 
 | Perimeter Range | N/A | `10×` | Maximum perimeter multiplier between faces. Only applies in **Prediction** mode |
 | Corner Angle Threshold | N/A | `65°` | Maximum difference in average internal corner angles between faces. Only applies in **Prediction** mode |
 | Fill Gaps | N/A | `True` | After the predictive flood fill, select any unselected faces surrounded on 2+ sides by selected faces that are within the normal angle threshold. Only applies in **Prediction** mode |
+| Only Active Face | N/A | `True` | Use only the active face as the starting point; when disabled, all selected faces are used |
 
 ### Boundary Type Options
 
@@ -32,4 +33,4 @@ Hold down these keys when executing the operator to change its default behaviour
 
 | Key | Description |
 | :--- | :--- |
-| SHIFT | Use all selected faces as starting points instead of just the active face |
+| SHIFT | Sets **Only Active Face** to `False` |

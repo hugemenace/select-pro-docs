@@ -10,6 +10,7 @@ Select objects related to the active object (or all selected objects) by travers
 | :--- | :--- | :--- | :--- |
 | Extend Selection | N/A | `True` | Extend the current selection instead of replacing it |
 | Direction | N/A | `Children` | Which part of the hierarchy to select (see below) |
+| Only Active Object | N/A | `True` | Use only the active object as the seed; when disabled, all selected objects are used |
 
 ### Direction Options
 
@@ -29,4 +30,4 @@ Hold down these keys when executing the operator to change its default behaviour
 
 | Key | Description |
 | :--- | :--- |
-| SHIFT | Use all selected objects instead of just the active object |
+| SHIFT | Sets **Only Active Object** to `False` |

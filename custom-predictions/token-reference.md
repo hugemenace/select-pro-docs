@@ -72,6 +72,7 @@ Tokens describing object-level properties (Object Mode).
 | :--- | :--- |
 | `OBJECTS::HAS_MULTI_OBJECTS` | The view layer contains more than one object |
 | `OBJECTS::HAS_SINGLE_OBJECT` | The view layer contains exactly one object |
+| `OBJECTS::SELECTION_HAS_MODIFIERS` | At least one selected object has at least one modifier |
 | `OBJECTS::TARGET_HAS_DIMENSIONS` | The active object has non-zero dimensions |
 | `OBJECTS::TARGET_HAS_HIGH_LOD_AFFIX` | The active object's name contains a `_high` affix |
 | `OBJECTS::TARGET_HAS_LOW_LOD_AFFIX` | The active object's name contains a `_low` affix |
@@ -82,6 +83,7 @@ Tokens describing object-level properties (Object Mode).
 | `OBJECTS::TARGET_HAS_SHARED_DATA` | Other objects share the same object data as the active object |
 | `OBJECTS::TARGET_HAS_TRANSLATION` | The active object has a non-zero world-space location |
 | `OBJECTS::TARGET_HAS_VOLUME` | The active object has a non-zero volume |
+| `OBJECTS::TARGET_IN_COLLECTION` | The active object belongs to at least one user-defined collection |
 | `OBJECTS::TARGET_IS_TYPE_ARMATURE` | The active object is an Armature |
 | `OBJECTS::TARGET_IS_TYPE_CAMERA` | The active object is a Camera |
 | `OBJECTS::TARGET_IS_TYPE_CURVE` | The active object is a Curve |
@@ -132,6 +134,7 @@ Tokens describing the state of the active mesh (Edit Mesh Mode).
 | :--- | :--- |
 | `MESH::HAS_EDGE_BEVELS` | The mesh has edges with bevel weights |
 | `MESH::HAS_EDGE_CREASES` | The mesh has edges with creases |
+| `MESH::HAS_EDGE_MARKS` | The mesh has any edge mark — bevel, crease, seam, or sharp |
 | `MESH::HAS_EDGE_SEAMS` | The mesh has edges marked as seams |
 | `MESH::HAS_EDGE_SHARPS` | The mesh has edges marked as sharp |
 | `MESH::HAS_INTERIOR_FACES` | The mesh has interior faces |
@@ -194,6 +197,7 @@ Tokens describing the active edge or edge selection (Edit Mesh Mode).
 | `EDGES::SELECTION_IS_EDGE_LOOP` | The entire selection forms a single edge loop |
 | `EDGES::SELECTION_IS_EDGE_CHAINS` | The selection contains only edge chains |
 | `EDGES::SELECTION_IS_EDGE_LOOPS` | The selection contains only edge loops |
+| `EDGES::SELECTION_IS_EDGE_LOOP_BOUNDARIES` | Every component in the selection is a valid loop boundary patch — no non-boundary components selected |
 | `EDGES::TARGET_HAS_BEVEL` | The active edge has a bevel weight |
 | `EDGES::TARGET_HAS_CREASE` | The active edge has a crease |
 | `EDGES::TARGET_HAS_MIRROR_X` | The active edge has a mirror counterpart on the X axis |
@@ -202,6 +206,7 @@ Tokens describing the active edge or edge selection (Edit Mesh Mode).
 | `EDGES::TARGET_HAS_SEAM` | The active edge is marked as a seam |
 | `EDGES::TARGET_HAS_SHARP` | The active edge is marked as sharp |
 | `EDGES::TARGET_INSIDE_EDGE_RING` | The active edge is part of an edge ring |
+| `EDGES::TARGET_INSIDE_QUAD_EDGE_LOOP` | The active edge sits inside quad-topology geometry — a loop-step edge exists at one of its vertices |
 | `EDGES::TARGET_IS_BOUNDARY_EDGE` | The active edge is a boundary edge |
 | `EDGES::TARGET_IS_DANGLING_EDGE` | The active edge is a dangling edge |
 | `EDGES::TARGET_IS_FACELESS_EDGE` | The active edge has no connected faces |

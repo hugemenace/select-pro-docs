@@ -17,6 +17,7 @@ Predictions can be enabled, disabled, and tuned in [Preferences](/getting-starte
 Select Pro adds a set of advanced selection operators not available in Blender by default. These are fully integrated into the menu and work alongside built-in tools.
 
 **Object Mode**
+- [Select Collection](/operators/object/select-collection) — select all objects in the active object's collection
 - [Select Hierarchy](/operators/object/select-hierarchy) — select related objects by traversing the parent-child hierarchy
 - [Select Similar Name](/operators/object/select-similar-name) — select objects with similar names using affix stripping and fuzzy matching
 - [Select Similar Size](/operators/object/select-similar-size) — select objects with similar dimensions or volume
@@ -29,6 +30,7 @@ Select Pro adds a set of advanced selection operators not available in Blender b
 - [Grow/Shrink Selection](/operators/mesh/grow-shrink-selection) — interactively grow or shrink the current selection
 - [Select Similar Faces by Direction](/operators/mesh/select-similar-faces-by-direction) — select faces pointing in a similar direction
 - [Select Similar Face Islands](/operators/mesh/select-similar-face-islands) — select mesh islands with similar structure and volume
+- [Select Similar Element](/operators/mesh/select-similar-element) — select elements whose local geometry matches the shape of the active element
 - [Select Vertices by Proximity](/operators/mesh/select-vertices-by-proximity) — interactively select vertices within a radius
 
 ## Double-Click Operators
@@ -46,6 +48,12 @@ Some Select Pro operators are interactive — they respond to mouse movement in 
 Select Pro operators executed via the **double-click** binding remember their settings between uses. Properties are saved when you confirm an operation and restored the next time the operator runs — so once you've dialled in settings like direction, tolerance, or size method, they'll stick for the session. Operators executed from the predictive menu do not use this behaviour. This can be disabled in [Preferences](/getting-started/preferences).
 
 All operators also support Blender's **Adjust Last Operation** panel (accessible via **`F9`** or the bottom-left corner of the viewport after execution), letting you tweak properties after the fact.
+
+## Save & Recall Selections
+
+Select Pro can save named snapshots of the current selection and restore them at any time. Saved selections are stored in the project file and persist across sessions.
+
+Access the feature via **Manage Selections** in the main menu. See [Save & Recall Selections](/getting-started/save-recall-selections) for full details.
 
 ## Quick Actions Menu
 

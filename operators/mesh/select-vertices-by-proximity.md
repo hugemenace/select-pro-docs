@@ -2,7 +2,7 @@
 
 Interactively select vertices within a radius of the active vertex. Move the mouse away from the starting point to increase the radius and toward it to decrease it. Can optionally restrict selection to vertices that are topologically connected to the origin.
 
-![Contiguous Edge Path](../../_media/vertex-proximity.avif ':class=avif')
+![Select Vertices by Proximity](../../_media/vertex-proximity.avif ':class=avif')
 
 ## Properties
 
@@ -10,6 +10,7 @@ Interactively select vertices within a radius of the active vertex. Move the mou
 | :--- | :--- | :--- | :--- |
 | Radius | N/A | `0.0` | Selection radius in world units |
 | Only Connected | `C` | `False` | Select only vertices within the radius that are reachable via connected edges from the origin vertex |
+| Only Active Vertex | N/A | `True` | Use only the active vertex as the origin; when disabled, all selected vertices are used |
 
 ## Execution Modes
 
@@ -17,7 +18,7 @@ Hold down these keys when executing the operator to change its default behaviour
 
 | Key | Description |
 | :--- | :--- |
-| SHIFT | Use all selected vertices as starting points instead of just the active vertex |
+| SHIFT | Sets **Only Active Vertex** to `False` |
 
 ## Interactive Controls
 

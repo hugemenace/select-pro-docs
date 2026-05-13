@@ -4,11 +4,13 @@
     - [Install / Update](/getting-started/install-update)
     - [Changelog](/getting-started/changelog)
     - [Shortcuts](/getting-started/shortcuts)
+    - [Save & Recall Selections](/getting-started/save-recall-selections)
     - [Preferences](/getting-started/preferences)
     - [Support](/getting-started/support)
 
 - — Object Operators —
 
+    - [Select Collection](/operators/object/select-collection)
     - [Select Hierarchy](/operators/object/select-hierarchy)
     - [Select Similar Name](/operators/object/select-similar-name)
     - [Select Similar Size](/operators/object/select-similar-size)
@@ -22,7 +24,9 @@
     - [Grow/Shrink Selection](/operators/mesh/grow-shrink-selection)
     - [Select Similar Faces by Direction](/operators/mesh/select-similar-faces-by-direction)
     - [Select Similar Face Islands](/operators/mesh/select-similar-face-islands)
+    - [Select Similar Element](/operators/mesh/select-similar-element)
     - [Select Vertices By Proximity](/operators/mesh/select-vertices-by-proximity)
+    - [Smart Edge Select](/operators/mesh/smart-edge-select)
 
 - — Custom Predictions —
 
