@@ -37,7 +37,7 @@ Tokens describing the state of the current selection.
 | `SELECTION::ALL` | All elements are selected |
 | `SELECTION::ANY` | At least one element is selected |
 | `SELECTION::HAS_VERTEX_OVERLAPS` | At least two selected vertices are within 0.1 mm of each other |
-| `SELECTION::ISOLATED_TARGET` | The active element is isolated (nothing else selected) |
+| `SELECTION::ISOLATED_TARGET` | The active element has no other selected elements connected to it |
 | `SELECTION::ISOLATED_VERTEX_GROUP` | Three or more vertices are selected and none are directly connected by an edge |
 | `SELECTION::ISOLATED_VERTEX_PAIR` | Exactly two vertices are selected and they are not directly connected by an edge |
 | `SELECTION::MULTIPLE` | More than one element is selected |
@@ -77,12 +77,12 @@ Tokens describing object-level properties (Object Mode).
 | `OBJECTS::TARGET_HAS_HIGH_LOD_AFFIX` | The active object's name contains a `_high` affix |
 | `OBJECTS::TARGET_HAS_LOW_LOD_AFFIX` | The active object's name contains a `_low` affix |
 | `OBJECTS::TARGET_HAS_MATERIALS` | The active object has materials assigned |
-| `OBJECTS::TARGET_HAS_MIRROR_AFFIX` | The active object's name contains an `L.` / `R.` mirror affix |
+| `OBJECTS::TARGET_HAS_MIRROR_AFFIX` | The active object's name begins with an `L.` or `R.` mirror prefix |
 | `OBJECTS::TARGET_HAS_ROTATION` | The active object has a non-identity rotation |
 | `OBJECTS::TARGET_HAS_SCALE` | The active object has a non-unit scale |
 | `OBJECTS::TARGET_HAS_SHARED_DATA` | Other objects share the same object data as the active object |
 | `OBJECTS::TARGET_HAS_TRANSLATION` | The active object has a non-zero world-space location |
-| `OBJECTS::TARGET_HAS_VOLUME` | The active object has a non-zero volume |
+| `OBJECTS::TARGET_HAS_VOLUME` | The active object has non-zero dimensions on all three axes |
 | `OBJECTS::TARGET_IN_COLLECTION` | The active object belongs to at least one user-defined collection |
 | `OBJECTS::TARGET_IS_TYPE_ARMATURE` | The active object is an Armature |
 | `OBJECTS::TARGET_IS_TYPE_CAMERA` | The active object is a Camera |
@@ -113,9 +113,9 @@ Tokens describing parent-child relationships of the active object (Object Mode).
 
 | Token | Description |
 | :--- | :--- |
-| `HIERARCHY::TARGET_HAS_ANCESTORS` | The active object has one or more ancestors |
+| `HIERARCHY::TARGET_HAS_ANCESTORS` | The active object has a grandparent or deeper ancestor |
 | `HIERARCHY::TARGET_HAS_CHILDREN` | The active object has direct children |
-| `HIERARCHY::TARGET_HAS_DESCENDANTS` | The active object has descendants (children or deeper) |
+| `HIERARCHY::TARGET_HAS_DESCENDANTS` | The active object has grandchildren or deeper descendants |
 | `HIERARCHY::TARGET_HAS_FAMILY` | The active object is part of a parent-child hierarchy |
 | `HIERARCHY::TARGET_HAS_PARENT` | The active object has a direct parent |
 | `HIERARCHY::TARGET_HAS_ROOT` | The active object has a root ancestor |
@@ -167,8 +167,8 @@ Tokens describing the active vertex or vertex selection (Edit Mesh Mode).
 
 | Token | Description |
 | :--- | :--- |
-| `VERTICES::SELECTION_HAS_CONNECTED_VERTICES` | The selected vertices are connected to each other |
-| `VERTICES::SELECTION_HAS_DISSOLVABLE` | At least one selected vertex is dissolvable (all adjacent edges are manifold with a small dihedral angle) |
+| `VERTICES::SELECTION_HAS_CONNECTED_VERTICES` | At least two selected vertices are directly connected by an edge |
+| `VERTICES::SELECTION_HAS_DISSOLVABLE` | At least one selected vertex is dissolvable (has exactly two connected edges with a bend angle below the threshold) |
 | `VERTICES::TARGET_HAS_MIRROR_X` | The active vertex has a mirror counterpart on the X axis |
 | `VERTICES::TARGET_HAS_MIRROR_Y` | The active vertex has a mirror counterpart on the Y axis |
 | `VERTICES::TARGET_HAS_MIRROR_Z` | The active vertex has a mirror counterpart on the Z axis |
@@ -185,8 +185,8 @@ Tokens describing the active edge or edge selection (Edit Mesh Mode).
 
 | Token | Description |
 | :--- | :--- |
-| `EDGES::SELECTION_HAS_BRIDGE_ENDS` | Exactly two independent same-type components of equal edge count are selected — the precondition for Bridge Edge Loops |
-| `EDGES::SELECTION_HAS_CONNECTED_EDGES` | The selected edges form a connected chain |
+| `EDGES::SELECTION_HAS_BRIDGE_ENDS` | Exactly two independent same-type components are selected (both chains or both loops) — the precondition for Bridge Edge Loops |
+| `EDGES::SELECTION_HAS_CONNECTED_EDGES` | At least two selected edges share a vertex |
 | `EDGES::SELECTION_HAS_DISSOLVABLE` | At least one selected edge is dissolvable (manifold with both adjacent faces co-planar) |
 | `EDGES::SELECTION_HAS_EDGE_CHAINS` | The selection contains edge chains |
 | `EDGES::SELECTION_HAS_EDGE_LOOP_BOUNDARIES` | At least one connected component of selected edges forms the perimeter of a filled face patch |
@@ -207,7 +207,7 @@ Tokens describing the active edge or edge selection (Edit Mesh Mode).
 | `EDGES::TARGET_HAS_SHARP` | The active edge is marked as sharp |
 | `EDGES::TARGET_INSIDE_EDGE_RING` | The active edge is part of an edge ring |
 | `EDGES::TARGET_INSIDE_QUAD_EDGE_LOOP` | The active edge sits inside quad-topology geometry — a loop-step edge exists at one of its vertices |
-| `EDGES::TARGET_IS_BOUNDARY_EDGE` | The active edge is a boundary edge |
+| `EDGES::TARGET_IS_BOUNDARY_EDGE` | The active edge acts as a boundary — either a naked edge (one linked face) or a faux-sharp manifold edge (large dihedral angle between its two faces) |
 | `EDGES::TARGET_IS_DANGLING_EDGE` | The active edge is a dangling edge |
 | `EDGES::TARGET_IS_FACELESS_EDGE` | The active edge has no connected faces |
 | `EDGES::TARGET_IS_FAUX_SHARP_EDGE` | The active edge is implicitly sharp due to face angle |
@@ -224,8 +224,8 @@ Tokens describing the active face or face selection (Edit Mesh Mode).
 
 | Token | Description |
 | :--- | :--- |
-| `FACES::SELECTION_HAS_CONNECTED_FACES` | The selected faces are connected to each other |
-| `FACES::SELECTION_HAS_FACE_ISLANDS` | The selection contains disconnected face islands |
+| `FACES::SELECTION_HAS_CONNECTED_FACES` | At least two selected faces share an edge |
+| `FACES::SELECTION_HAS_FACE_ISLANDS` | The active face belongs to a mesh island — the mesh has multiple disconnected shells |
 | `FACES::SELECTION_HAS_NGONS` | At least one selected face is an ngon |
 | `FACES::SELECTION_HAS_QUADS` | At least one selected face is a quad |
 | `FACES::SELECTION_HAS_TRIANGLES` | At least one selected face is a triangle |
@@ -249,13 +249,13 @@ Tokens describing the active curve (Edit Curve Mode).
 | Token | Description |
 | :--- | :--- |
 | `CURVES::HAS_BEZIER_SPLINE` | The curve contains a Bezier spline |
-| `CURVES::HAS_CONTROL_POINTS_SELECTED` | Control points are selected |
+| `CURVES::HAS_CONTROL_POINTS_SELECTED` | At least one Bezier control point (main anchor) is selected |
 | `CURVES::HAS_HANDLES_SELECTED` | Bezier handles are selected |
 | `CURVES::HAS_MULTI_POINTS` | The curve has more than one control point |
 | `CURVES::HAS_NURBS_SPLINE` | The curve contains a NURBS spline |
-| `CURVES::HAS_POINTS_SELECTED` | Any curve points are selected |
+| `CURVES::HAS_POINTS_SELECTED` | At least one NURBS or poly spline point is selected |
 | `CURVES::HAS_POLY_SPLINE` | The curve contains a Poly spline |
-| `CURVES::HAS_SINGLE_POINT` | Exactly one control point is selected |
+| `CURVES::HAS_SINGLE_POINT` | The curve has exactly one control point across all splines |
 | `CURVES::HAS_VARIED_DIRECTIONS` | The selected points have varied directions |
 | `CURVES::HAS_VARIED_HANDLE_TYPES` | The selected Bezier handles have varied types |
 | `CURVES::HAS_VARIED_RADII` | The selected points have varied radii |
@@ -271,12 +271,12 @@ Tokens describing bone state (Edit Armature and Pose Mode).
 
 | Token | Description |
 | :--- | :--- |
-| `BONES::HAS_MIRROR` | The armature has a mirror bone counterpart |
+| `BONES::HAS_MIRROR` | At least one selected bone has a mirror counterpart in the armature |
 | `BONES::HAS_MULTI_BONES` | The armature has more than one bone |
-| `BONES::HAS_SINGLE_BONE` | Exactly one bone is selected |
+| `BONES::HAS_SINGLE_BONE` | The armature has exactly one bone |
 | `BONES::SELECTION_HAS_SHARED_BONE_COLLECTIONS` | The selected bones share a bone collection |
 | `BONES::SELECTION_HAS_SHARED_COLORS` | The selected bones share a color theme |
-| `BONES::SELECTION_HAS_SHARED_LENGTHS` | The selected bones have similar lengths |
-| `BONES::SELECTION_HAS_SHARED_PREFIXES` | The selected bones share a name prefix |
+| `BONES::SELECTION_HAS_SHARED_LENGTHS` | At least one unselected bone shares a similar length with a selected bone |
+| `BONES::SELECTION_HAS_SHARED_PREFIXES` | At least one unselected bone shares a name prefix with a selected bone |
 | `BONES::SELECTION_HAS_SHARED_SHAPES` | The selected bones share a custom shape |
-| `BONES::SELECTION_HAS_SHARED_SUFFIXES` | The selected bones share a name suffix |
+| `BONES::SELECTION_HAS_SHARED_SUFFIXES` | At least one unselected bone shares a name suffix with a selected bone |
