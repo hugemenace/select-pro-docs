@@ -11,7 +11,7 @@
 To help us resolve issues quickly, please include the following:
 
 - **Select Pro version** — found in **_`Edit > Preferences > Add-ons`_**, expand the Select Pro entry.
-- **Blender version** — shown in **_`Help > About`_** or the top-left of the splash screen.
+- **Blender version** — shown in **_`Blender Menu (Blender icon, next to File menu) > About Blender`_** or the top-left of the splash screen.
 - **Reproducible steps** — a clear, minimal set of steps that reliably trigger the issue.
 - **Error messages** — copy any relevant output from Blender's system console.
 
