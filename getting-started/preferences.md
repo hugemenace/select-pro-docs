@@ -14,6 +14,7 @@
 | **Enable saved selections** | Show the Manage Selections menu for saving and recalling selections |
 | **Enable right-click context menu integration** | Add Select Pro to Blender's right-click context menu in Object and Edit Mesh modes. Requires a reload to take effect |
 | **Enable the sidebar / N-panel** | Show the Select Pro panel in the sidebar (N-panel). Requires a reload to take effect |
+| **Enable the sidebar configuration panel** | Show the configuration panel within the sidebar / N-panel, independent of the operators panel. Requires a reload to take effect |
 
 ### Prediction Settings
 
@@ -38,6 +39,15 @@
 | **Modal Operator Sensitivity** | Controls how fast modal operators respond to mouse movement. Higher values are more sensitive |
 | **Modal Step Distance** | Mouse distance in pixels required to trigger one selection step in modal operators |
 
+## Pie Menu
+
+| Setting | Description |
+| :--- | :--- |
+| **Enable pie menu** | Replace the Select Pro main menu with a configurable pie menu. Requires a reload to take effect |
+| **Predictions List Limit** | Maximum number of predictions shown in the pie menu's prediction list slot |
+
+Each supported mode has its own collapsible section assigning an action to each of the eight pie slots (North, North-East, East, South-East, South, South-West, West, North-West). Modes: Object, Edit Mesh — Vertex, Edit Mesh — Edge, Edit Mesh — Face, Edit Curve, Edit Armature, Edit Lattice, and Pose. Each slot can be set to an operator, a sub-menu, the main menu, the prediction list, the manage selections menu, or left empty.
+
 ## Keymap
 
 Contains the customisable keybinds for each supported mode. See [Shortcuts](/getting-started/shortcuts) for an overview.
@@ -52,6 +62,8 @@ Contains the customisable keybinds for each supported mode. See [Shortcuts](/get
 | **Vertex** | Operator to run when double-clicking a vertex in Edit Mesh Mode |
 | **Edge** | Operator to run when double-clicking an edge in Edit Mesh Mode |
 | **Face** | Operator to run when double-clicking a face in Edit Mesh Mode |
+| **Enable Double-Click in Edit Lattice Mode** | Enable double-click operator dispatch in Edit Lattice Mode. Requires a reload to take effect |
+| **Lattice** | Operator to run when double-clicking a control point in Edit Lattice Mode |
 | **Enable Double-Click in Edit Curve Mode** | Enable double-click operator dispatch in Edit Curve Mode. Requires a reload to take effect |
 | **Curve** | Operator to run when double-clicking a control point in Edit Curve Mode |
 | **Enable Double-Click in Edit Armature Mode** | Enable double-click operator dispatch in Edit Armature Mode. Requires a reload to take effect |

@@ -1,5 +1,36 @@
 # Changelog
 
+## 1.2.0 — 2026-05-29
+
+### Features
+
+- Add a Pie menu option for all supported modes (replaces the main menu)
+- Add full support for Edit Lattice mode
+- Add the Lattice Select Along Axis operator and associated predictions
+- Add the Flood Fill Select operator (vertex, edge, and face mode)
+- Add the Select Parent/Child operator for Edit Armature and Pose mode (walks the hierarchy selecting individual bones or chains)
+- Add the Select Constraint Target operator and associated predictions
+- Add the Select Modifier Object operator and associated predictions
+- Add a preference option to toggle the visibility of the configuration sidebar independently of the operators panel
+- Update all Select Pro operator idnames to expose the right-click "Assign Shortcut" option and better support custom keymaps
+
+### Bug Fixes
+
+- Ensure Smart Select Toggle works in multi-object edit scenarios (mesh, curve, armature, and pose)
+- Fix a regression in Grow/Shrink Selection for naked/wire vertices and edges
+- Fix the "active edge is None" error in the Select Similar Connected operator
+
+## 1.1.1 — 2026-05-17
+
+### Features
+
+- Add a graceful error-handling mechanism with a link to the support page
+
+### Bug Fixes
+
+- Fix Pose mode selection saving and recalling (Blender 4/5 API differences)
+- Fix Pose mode Smart Select Toggle error (Blender 4/5 API differences)
+
 ## 1.1.0 — 2026-05-13
 
 ### Features

@@ -2,7 +2,7 @@
 
 ## Unified Selection Menu
 
-Select Pro unifies all of Blender's built-in selection methods and a suite of custom operators into a single predictive menu, accessible in Object Mode, Edit Mesh, Edit Curve, Edit Armature, and Pose Mode.
+Select Pro unifies all of Blender's built-in selection methods and a suite of custom operators into a single predictive menu, accessible in Object Mode, Edit Mesh, Edit Curve, Edit Armature, Edit Lattice, and Pose Mode.
 
 Press **`A`** in any supported mode to open the menu. Select Pro can also be added to Blender's right-click context menu via [Preferences](/getting-started/preferences).
 
@@ -18,7 +18,9 @@ Select Pro adds a set of advanced selection operators not available in Blender b
 
 **Object Mode**
 - [Select Collection](/operators/object/select-collection) — select all objects in the active object's collection
+- [Select Constraint Target](/operators/object/select-constraint-target) — select the target object of a constraint on the active object
 - [Select Hierarchy](/operators/object/select-hierarchy) — select related objects by traversing the parent-child hierarchy
+- [Select Modifier Object](/operators/object/select-modifier-object) — select the object referenced by a modifier on the active object
 - [Select Similar Name](/operators/object/select-similar-name) — select objects with similar names using affix stripping and fuzzy matching
 - [Select Similar Size](/operators/object/select-similar-size) — select objects with similar dimensions or volume
 
@@ -27,11 +29,18 @@ Select Pro adds a set of advanced selection operators not available in Blender b
 - [Select Contiguous Edge Path](/operators/mesh/select-contiguous-edge-path) — select an edge path by visual continuity
 - [Select Edge Boundary](/operators/mesh/select-edge-boundary) — select connected boundary edges of the same type
 - [Select Face Surface](/operators/mesh/select-face-surface) — flood-fill select a face surface bounded by edge marks or face attributes
+- [Flood Fill Select](/operators/mesh/flood-fill-select) — flood-fill select connected elements, stopping at pre-existing selections
 - [Grow/Shrink Selection](/operators/mesh/grow-shrink-selection) — interactively grow or shrink the current selection
 - [Select Similar Faces by Direction](/operators/mesh/select-similar-faces-by-direction) — select faces pointing in a similar direction
 - [Select Similar Face Islands](/operators/mesh/select-similar-face-islands) — select mesh islands with similar structure and volume
 - [Select Similar Element](/operators/mesh/select-similar-element) — select elements whose local geometry matches the shape of the active element
 - [Select Vertices by Proximity](/operators/mesh/select-vertices-by-proximity) — interactively select vertices within a radius
+
+**Edit Armature & Pose Mode**
+- [Select Parent/Child](/operators/armature/select-parent-child) — interactively walk up or down the bone hierarchy from the current selection
+
+**Edit Lattice Mode**
+- [Select Along Axis](/operators/lattice/select-along-axis) — select connected lattice points along the chosen axes
 
 ## Double-Click Operators
 

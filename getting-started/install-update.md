@@ -4,6 +4,10 @@
 
 !> **Platform:** Select Pro only supports: Windows `x64`, macOS `universal` (Intel and Apple Silicon), Linux `x64` / `arm64`.
 
+## Superhive Purchases
+
+💡 Superhive now supports [Blender Extensions](https://superhivemarket.com/posts/blender-extension-support-launched-on-superhive). You can easily install and keep Select Pro up to date using this method.
+
 ## How to Install
 
 1. Download the latest version of the add-on (`select-pro.vX.Y.Z-platform.zip`)

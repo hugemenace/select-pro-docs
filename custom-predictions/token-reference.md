@@ -15,6 +15,7 @@ Tokens available in all modes and contexts.
 | `GLOBAL::ALWAYS` | Always true; use to show a prediction in all contexts |
 | `GLOBAL::IS_EDIT_ARMATURE_MODE` | The current mode is Edit Armature Mode |
 | `GLOBAL::IS_EDIT_CURVE_MODE` | The current mode is Edit Curve Mode |
+| `GLOBAL::IS_EDIT_LATTICE_MODE` | The current mode is Edit Lattice Mode |
 | `GLOBAL::IS_EDIT_MESH_EDGE_MODE` | The mesh select mode is set to Edge (exclusively) |
 | `GLOBAL::IS_EDIT_MESH_FACE_MODE` | The mesh select mode is set to Face (exclusively) |
 | `GLOBAL::IS_EDIT_MESH_MODE` | The current mode is Edit Mesh Mode |
@@ -73,11 +74,49 @@ Tokens describing object-level properties (Object Mode).
 | `OBJECTS::HAS_MULTI_OBJECTS` | The view layer contains more than one object |
 | `OBJECTS::HAS_SINGLE_OBJECT` | The view layer contains exactly one object |
 | `OBJECTS::SELECTION_HAS_MODIFIERS` | At least one selected object has at least one modifier |
+| `OBJECTS::TARGET_HAS_CON_ACTION_TARGET` | The active object has an Action constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_CHILD_OF_TARGET` | The active object has a Child Of constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_CLAMP_TO_TARGET` | The active object has a Clamp To constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_COPY_LOCATION_TARGET` | The active object has a Copy Location constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_COPY_ROTATION_TARGET` | The active object has a Copy Rotation constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_COPY_SCALE_TARGET` | The active object has a Copy Scale constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_COPY_TRANSFORMS_TARGET` | The active object has a Copy Transforms constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_DAMPED_TRACK_TARGET` | The active object has a Damped Track constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_FLOOR_TARGET` | The active object has a Floor constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_FOLLOW_PATH_TARGET` | The active object has a Follow Path constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_FOLLOW_TRACK_CAMERA` | The active object has a Follow Track constraint whose camera is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_FOLLOW_TRACK_DEPTH_OBJECT` | The active object has a Follow Track constraint whose depth object is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_GEOMETRY_ATTRIBUTE_TARGET` | The active object has a Geometry Attribute constraint whose target is a visible object in the view layer (Blender 5+ only) |
+| `OBJECTS::TARGET_HAS_CON_LIMIT_DISTANCE_TARGET` | The active object has a Limit Distance constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_LOCKED_TRACK_TARGET` | The active object has a Locked Track constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_OBJECT_SOLVER_CAMERA` | The active object has an Object Solver constraint whose camera is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_PIVOT_TARGET` | The active object has a Pivot constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_SHRINKWRAP_TARGET` | The active object has a Shrinkwrap constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_STRETCH_TO_TARGET` | The active object has a Stretch To constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_TRACK_TO_TARGET` | The active object has a Track To constraint whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_CON_TRANSFORM_TARGET` | The active object has a Transform constraint whose target is a visible object in the view layer |
 | `OBJECTS::TARGET_HAS_DIMENSIONS` | The active object has non-zero dimensions |
 | `OBJECTS::TARGET_HAS_HIGH_LOD_AFFIX` | The active object's name contains a `_high` affix |
 | `OBJECTS::TARGET_HAS_LOW_LOD_AFFIX` | The active object's name contains a `_low` affix |
 | `OBJECTS::TARGET_HAS_MATERIALS` | The active object has materials assigned |
 | `OBJECTS::TARGET_HAS_MIRROR_AFFIX` | The active object's name begins with an `L.` or `R.` mirror prefix |
+| `OBJECTS::TARGET_HAS_MOD_ARRAY_OFFSET_OBJECT` | The active object has an Array modifier whose offset object is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_BOOLEAN_OBJECT` | The active object has a Boolean modifier whose object is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_CAST_OBJECT` | The active object has a Cast modifier whose object is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_CURVE_OBJECT` | The active object has a Curve modifier whose object is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_HOOK_OBJECT` | The active object has a Hook modifier whose object is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_LATTICE_OBJECT` | The active object has a Lattice modifier whose object is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_MESH_DEFORM_OBJECT` | The active object has a Mesh Deform modifier whose object is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_MIRROR_OBJECT` | The active object has a Mirror modifier whose mirror object is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_NORMAL_EDIT_TARGET` | The active object has a Normal Edit modifier whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_SCREW_AXIS_OBJECT` | The active object has a Screw modifier whose axis object is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_SHRINKWRAP_TARGET` | The active object has a Shrinkwrap modifier whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_SIMPLE_DEFORM_ORIGIN` | The active object has a Simple Deform modifier whose origin is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_SURFACE_DEFORM_TARGET` | The active object has a Surface Deform modifier whose target is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_VOLUME_TO_MESH_OBJECT` | The active object has a Volume to Mesh modifier whose object is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_WARP_FROM_OBJECT` | The active object has a Warp modifier whose from-object is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_WARP_TO_OBJECT` | The active object has a Warp modifier whose to-object is a visible object in the view layer |
+| `OBJECTS::TARGET_HAS_MOD_WAVE_START_OBJECT` | The active object has a Wave modifier whose start position object is a visible object in the view layer |
 | `OBJECTS::TARGET_HAS_ROTATION` | The active object has a non-identity rotation |
 | `OBJECTS::TARGET_HAS_SCALE` | The active object has a non-unit scale |
 | `OBJECTS::TARGET_HAS_SHARED_DATA` | Other objects share the same object data as the active object |
@@ -158,6 +197,9 @@ Tokens describing the state of the active mesh (Edit Mesh Mode).
 | `MESH::IS_FACE_MODE` | The mesh is in face select mode |
 | `MESH::IS_VERTEX_MODE` | The mesh is in vertex select mode |
 | `MESH::SELECTION_HAS_DISSOLVABLE` | At least one selected vertex or edge can be dissolved |
+| `MESH::SELECTION_IS_CIRCULARIZABLE` | The selection contains at least one closed edge loop whose interior vertex angles are not all equal — the loop can be circularized by Blender's Loop Tools "Circle" operator |
+| `MESH::SELECTION_IS_FILLABLE` | A single closed edge loop (3+ edges) with no face interior — valid input for `mesh.fill` |
+| `MESH::SELECTION_IS_GRID_FILLABLE` | Valid input for `mesh.fill_grid`: a single closed edge loop (no face interior), two chains connected at their endpoints by wire or naked edges, or a connected face patch with a single closed boundary loop |
 
 ---
 
@@ -174,6 +216,7 @@ Tokens describing the active vertex or vertex selection (Edit Mesh Mode).
 | `VERTICES::TARGET_HAS_MIRROR_Z` | The active vertex has a mirror counterpart on the Z axis |
 | `VERTICES::TARGET_HAS_WIRE_EDGES` | The active vertex has one or more wire edges (edges with no linked faces) |
 | `VERTICES::TARGET_IN_VGROUP` | The active vertex belongs to a vertex group |
+| `VERTICES::TARGET_IS_MANIFOLD_VERTEX` | The active vertex has edges and every one has at least one linked face — it sits on a naked boundary or inside a manifold region, never on a wire edge |
 | `VERTICES::TARGET_IS_NAKED_VERTEX` | The active vertex is standalone or has only wire edges |
 | `VERTICES::TARGET_IS_STANDALONE_VERTEX` | The active vertex has no connected edges |
 
@@ -265,6 +308,19 @@ Tokens describing the active curve (Edit Curve Mode).
 
 ---
 
+## LATTICE
+
+Tokens describing the active lattice (Edit Lattice Mode).
+
+| Token | Description |
+| :--- | :--- |
+| `LATTICE::HAS_DEPTH_U` | The lattice has more than one subdivision along the U axis |
+| `LATTICE::HAS_DEPTH_V` | The lattice has more than one subdivision along the V axis |
+| `LATTICE::HAS_DEPTH_W` | The lattice has more than one subdivision along the W axis |
+| `LATTICE::HAS_MULTI_POINTS` | The lattice has more than one point |
+
+---
+
 ## BONES
 
 Tokens describing bone state (Edit Armature and Pose Mode).
@@ -274,6 +330,8 @@ Tokens describing bone state (Edit Armature and Pose Mode).
 | `BONES::HAS_MIRROR` | At least one selected bone has a mirror counterpart in the armature |
 | `BONES::HAS_MULTI_BONES` | The armature has more than one bone |
 | `BONES::HAS_SINGLE_BONE` | The armature has exactly one bone |
+| `BONES::POSE_TARGET_HAS_ROTATION` | The active pose bone has a non-identity rotation applied |
+| `BONES::POSE_TARGET_HAS_SCALE` | The active pose bone has a non-unit scale applied |
 | `BONES::SELECTION_HAS_SHARED_BONE_COLLECTIONS` | The selected bones share a bone collection |
 | `BONES::SELECTION_HAS_SHARED_COLORS` | The selected bones share a color theme |
 | `BONES::SELECTION_HAS_SHARED_LENGTHS` | At least one unselected bone shares a similar length with a selected bone |

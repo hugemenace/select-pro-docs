@@ -11,7 +11,9 @@
 - — Object Operators —
 
     - [Select Collection](/operators/object/select-collection)
+    - [Select Constraint Target](/operators/object/select-constraint-target)
     - [Select Hierarchy](/operators/object/select-hierarchy)
+    - [Select Modifier Object](/operators/object/select-modifier-object)
     - [Select Similar Name](/operators/object/select-similar-name)
     - [Select Similar Size](/operators/object/select-similar-size)
 
@@ -21,12 +23,21 @@
     - [Select Contiguous Edge Path](/operators/mesh/select-contiguous-edge-path)
     - [Select Edge Boundary](/operators/mesh/select-edge-boundary)
     - [Select Face Surface](/operators/mesh/select-face-surface)
+    - [Flood Fill Select](/operators/mesh/flood-fill-select)
     - [Grow/Shrink Selection](/operators/mesh/grow-shrink-selection)
     - [Select Similar Faces by Direction](/operators/mesh/select-similar-faces-by-direction)
     - [Select Similar Face Islands](/operators/mesh/select-similar-face-islands)
     - [Select Similar Element](/operators/mesh/select-similar-element)
     - [Select Vertices By Proximity](/operators/mesh/select-vertices-by-proximity)
     - [Smart Edge Select](/operators/mesh/smart-edge-select)
+
+- — Armature Operators —
+
+    - [Select Parent/Child](/operators/armature/select-parent-child)
+
+- — Lattice Operators —
+
+    - [Select Along Axis](/operators/lattice/select-along-axis)
 
 - — Custom Predictions —
 
