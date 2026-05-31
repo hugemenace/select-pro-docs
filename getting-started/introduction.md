@@ -1,5 +1,13 @@
 # Introduction
 
+Select Pro is an all-in-one menu, bringing together every selection method in Blender, with context-aware prediction, and powerful new selection tools.
+
+<div style="max-width: 800px;">
+    <div style="position: relative; padding-top: 56.25%; margin: 1rem 0 2rem;">
+        <iframe style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100% !important; height: 100% !important; margin: 0 !important;" src="https://www.youtube.com/embed/hf4YqIi3I7Q?modestbranding=1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</div>
+
 ## Unified Selection Menu
 
 Select Pro unifies all of Blender's built-in selection methods and a suite of custom operators into a single predictive menu, accessible in Object Mode, Edit Mesh, Edit Curve, Edit Armature, Edit Lattice, and Pose Mode.
