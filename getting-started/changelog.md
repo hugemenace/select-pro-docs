@@ -1,6 +1,16 @@
 # Changelog
 
-## 1.2.0 — 2026-05-29
+## 1.2.1 — 2026-05-31
+
+### Features
+
+- Update the packaging process to include a universal platform build for extensions/repo usage
+
+### Bug Fixes
+
+- Fix the edge boundary regression error when running in modal mode
+
+## 1.2.0 — 2026-05-30
 
 ### Features
 
